@@ -25,7 +25,7 @@ public class FileReader {
                     case "Email":email=parts[1];break;
                     case "Phone": phone=Long.parseLong(parts[1]);break;
                     default:
-                        System.out.println("Invalid param "+parts[1]);
+                        throw new BadAttributeValueExpException("Bad format:"+line );
                 }
             }
         } catch (Exception e) {
